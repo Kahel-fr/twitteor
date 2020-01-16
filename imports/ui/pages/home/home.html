@@ -1,4 +1,7 @@
-<template name="App_home">
-  {{> hello}}
-  {{> info}}
+<template name="home">
+	<div class="container home">
+	{{#each posts}}
+		{{>post}}
+	{{/each}}
+	</div>
 </template>
