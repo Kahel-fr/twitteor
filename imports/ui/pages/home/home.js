@@ -16,6 +16,5 @@ Template.home.helpers({
 			content: 'Ceci est un autre nouveau tweet',
 			timestamp: '16/01/2020 15h35'
 		}
-		
 	]
 });
