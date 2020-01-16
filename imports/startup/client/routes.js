@@ -10,7 +10,7 @@ import '../../ui/pages/not-found/not-found.js';
 FlowRouter.route('/', {
   name: 'App.home',
   action() {
-    BlazeLayout.render('App_body', { main: 'timeline' });
+    BlazeLayout.render('App_body', { main: 'home' });
   },
 });
 

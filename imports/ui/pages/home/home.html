@@ -1,4 +1,5 @@
-<template name="App_home">
-	{{>navbar}}
-	{{>timeline}}
+<template name="home">
+{{#each posts}}
+	{{>post}}
+{{/each}}
 </template>
