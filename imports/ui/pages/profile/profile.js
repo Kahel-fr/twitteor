@@ -1,11 +1,10 @@
-import './home.html';
-
-import '../../components/hello/hello.js';
-import '../../components/info/info.js';
-import '../../components/post/post.js';
-
-Template.home.helpers({
-	posts: [
+import "./profile.html"
+Template.profile.helpers({
+	username: "Michaël",
+	followers: 8,
+	followeds: 42,
+	headline: "Lorem ipsum bla bla bla",
+	posts:[
 		{ 
 			username: 'Michaël',
 			content: 'Ceci est un nouveau tweet',

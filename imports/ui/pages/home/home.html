@@ -1,7 +1,11 @@
 <template name="home">
 	<div class="container home">
-	{{#each posts}}
-		{{>post}}
-	{{/each}}
+		<div class="row">
+			<div class="col">
+				{{#each posts}}
+					{{>post}}
+				{{/each}}
+			</div>
+		</div>
 	</div>
 </template>
