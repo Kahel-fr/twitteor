@@ -1,0 +1,23 @@
+<template name="profile">
+<div class="container-fluid">
+	<div class="row bg-info">
+		<div class="col">
+			<h2>{{username}}</h2>
+		</div>
+		<div class="col">
+			{{followers}} suiveur(s)
+		</div>
+		<div class="col">
+			{{followeds}} suivi(s)
+		</div>
+		<div class="col">
+			<button type="button" class="btn btn-primary">Suivre</button>
+		</div>
+	</div>
+</div>
+<div class="container">
+	{{#each posts}}
+		{{>post}}
+	{{/each}}
+</div>
+</template>

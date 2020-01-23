@@ -7,7 +7,7 @@ import '../../components/post/post.js';
 Template.home.helpers({
 	posts: [
 		{ 
-			username: 'Michäel',
+			username: 'Michaël',
 			content: 'Ceci est un nouveau tweet',
 			timestamp: '16/01/2020 16h41'
 		},
