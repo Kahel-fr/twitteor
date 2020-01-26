@@ -1,4 +1,5 @@
 aldeed:collection2@3.0.6
+aldeed:simple-schema@1.5.4
 allow-deny@1.1.0
 autoupdate@1.6.0
 babel-compiler@7.5.1
@@ -44,6 +45,7 @@ less@2.8.0
 livedata@1.0.18
 lmieulet:meteor-coverage@1.1.4
 logging@1.1.20
+mdg:validation-error@0.2.0
 meteor@1.9.3
 meteor-base@1.4.0
 meteorhacks:picker@1.0.3
