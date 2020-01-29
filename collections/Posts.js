@@ -17,3 +17,5 @@ SchemaPost = new SimpleSchema({
 		}
 	}
 });
+
+Posts.attachSchema(SchemaPost);
