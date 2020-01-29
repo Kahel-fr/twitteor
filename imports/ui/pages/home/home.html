@@ -2,6 +2,9 @@
 	<div class="container home">
 		<div class="row">
 			<div class="col">
+				{{#if currentUser}}
+					{{>post_form}}
+				{{/if}}
 				{{#each posts}}
 					{{>post}}
 				{{/each}}
