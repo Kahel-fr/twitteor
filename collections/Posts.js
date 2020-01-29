@@ -11,7 +11,7 @@ SchemaPost = new SimpleSchema({
 		}
 	},
 	author: {
-		type: String
+		type: String,
 		autoValue: function(){
 			return Meteor.userId();
 		}
