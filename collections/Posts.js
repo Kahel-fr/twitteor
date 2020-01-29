@@ -25,3 +25,12 @@ Posts.allow({
 })
 
 Posts.attachSchema(SchemaPost);
+
+if(Meteor.isServer){
+	Meteor.publish('posts.all', function(){
+		return Posts.find({});
+	});
+}
+else{
+	Meteor.subscribe('posts.all');
+}

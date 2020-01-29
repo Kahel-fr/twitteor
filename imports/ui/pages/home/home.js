@@ -1,51 +1,17 @@
+import {Posts} from '../../../../collections/Posts.js'
+
 import './home.html';
 
 import '../../components/hello/hello.js';
 import '../../components/info/info.js';
 import '../../components/post/post.js';
 import '../../components/post-form/post-form.js';
+Template.home.onCreated(function() {
+	Meteor.subscribe('posts.all');
+});
 
 Template.home.helpers({
-	posts: [
-		{ 
-			username: 'Michaël',
-			content: 'Ceci est un nouveau tweet',
-			timestamp: '16/01/2020 16h41'
-		},
-		{ 
-			username: 'Michaël',
-			content: 'Ceci est un nouveau tweet',
-			timestamp: '16/01/2020 16h41'
-		},
-		{ 
-			username: 'Michaël',
-			content: 'Ceci est un nouveau tweet',
-			timestamp: '16/01/2020 16h41'
-		},
-		{ 
-			username: 'Michaël',
-			content: 'Ceci est un nouveau tweet',
-			timestamp: '16/01/2020 16h41'
-		},
-		{ 
-			username: 'Michaël',
-			content: 'Ceci est un nouveau tweet',
-			timestamp: '16/01/2020 16h41'
-		},
-		{ 
-			username: 'Michaël',
-			content: 'Ceci est un nouveau tweet',
-			timestamp: '16/01/2020 16h41'
-		},
-		{ 
-			username: 'Michaël',
-			content: 'Ceci est un nouveau tweet',
-			timestamp: '16/01/2020 16h41'
-		},
-		{ 
-			username: 'Michaël',
-			content: 'Ceci est un nouveau tweet',
-			timestamp: '16/01/2020 16h41'
-		},
-	]
+	posts() {
+		return Posts.find({},{ sort: { createdAt: -1 } });
+	},
 });
