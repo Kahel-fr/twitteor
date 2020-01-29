@@ -3,6 +3,7 @@ import './home.html';
 import '../../components/hello/hello.js';
 import '../../components/info/info.js';
 import '../../components/post/post.js';
+import '../../components/post-form/post-form.js';
 
 Template.home.helpers({
 	posts: [

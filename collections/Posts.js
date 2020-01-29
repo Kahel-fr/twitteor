@@ -1,4 +1,4 @@
-const Posts = new Mongo.Collection("posts");
+export const Posts = new Mongo.Collection("posts");
 
 SchemaPost = new SimpleSchema({
 	content: {
@@ -17,3 +17,11 @@ SchemaPost = new SimpleSchema({
 		}
 	}
 });
+
+Posts.allow({
+  insert: function () {
+    return !!Meteor.userId();
+  }
+})
+
+Posts.attachSchema(SchemaPost);
