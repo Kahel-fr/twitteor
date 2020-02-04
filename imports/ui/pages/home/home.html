@@ -1,12 +1,18 @@
 <template name="home">
 	<div class="container home">
+		<nav>
+			<ul class="pagination">
+				<li class="page-item"><a class="page-link" href="/">Qui je suit</a></li>
+				<li class="page-item"><a class="page-link" href="/all">Tout le monde</a></li>
+			</ul>
+		</nav>
 		<div class="row">
 			<div class="col">
 				{{#if currentUser}}
-					{{>post_form}}
+				{{>post_form}}
 				{{/if}}
 				{{#each posts}}
-					{{>post}}
+				{{>post}}
 				{{/each}}
 			</div>
 		</div>
