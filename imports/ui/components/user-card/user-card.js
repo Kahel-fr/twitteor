@@ -8,6 +8,14 @@ Template.user_card.helpers({
 			followed: Template.instance().data._id,
 			follower: Meteor.userId()
 		})
+	},
+	//le nombre de suivis
+	followeds(){
+		return Follows.find({follower: Template.instance().data._id}).count();
+	},
+	//le nombre de suiveurs
+	followers(){
+		return Follows.find({followed: Template.instance().data._id}).count();
 	}
 })
 
