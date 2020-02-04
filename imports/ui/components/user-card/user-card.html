@@ -13,9 +13,15 @@
 				<div class="col">
 					{{followeds}} suivis
 				</div>
+				{{#if follow}}
 				<div class="col">
-					<button type="button" class="btn btn-primary">Suivre</button>
+					<button type="button" class="unfollow btn btn-primary">Ne plus suivre</button>
 				</div>
+				{{else}}
+				<div class="col">
+					<button type="button" class="follow btn btn-primary">Suivre</button>
+				</div>
+				{{/if}}
 			</div>
 		</div>
 	</p>

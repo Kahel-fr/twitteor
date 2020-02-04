@@ -12,7 +12,6 @@ Template.profile.helpers({
 	user() {
 		//si aucun paramètre n'est passé -> profile de l'utilisateur connecté sinon -> profile qui correspond à l'id passé en paramètre
 		var id = !FlowRouter.getParam("_id") ?Meteor.userId() : FlowRouter.getParam("_id");
-		console.log(id)
 		return Meteor.users.findOne({_id: id});
 	},
 	posts() {
