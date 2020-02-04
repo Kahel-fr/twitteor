@@ -1,0 +1,1 @@
+import "./user-card.html";

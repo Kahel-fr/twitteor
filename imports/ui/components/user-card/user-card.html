@@ -1,0 +1,25 @@
+<template name="user_card">
+<div class="card mb-3">
+  <div class="card-body">
+	<p class="card-text">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<h2>{{username}}</h2>
+				</div>
+				<div class="col">
+					{{followers}} suiveur(s)
+				</div>
+				<div class="col">
+					{{followeds}} suivis
+				</div>
+				<div class="col">
+					<button type="button" class="btn btn-primary">Suivre</button>
+				</div>
+			</div>
+		</div>
+	</p>
+	<div class="card-footer bg-transparent border-success">"<i>{{headline}}</i>"</div>
+  </div>
+</div>
+</template>

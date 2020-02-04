@@ -1,9 +1,12 @@
 import "./profile.html"
+import "../../components/user-card/user-card.js";
 Template.profile.helpers({
-	username: "Michaël",
-	followers: 8,
-	followeds: 42,
-	headline: "Lorem ipsum bla bla bla",
+	user : {
+		username: "Michaël",
+		followers: 8,
+		followeds: 42,
+		headline: "Lorem ipsum bla bla bla",
+	},
 	posts:[
 		{ 
 			username: 'Michaël',
