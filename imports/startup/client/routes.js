@@ -15,6 +15,13 @@ FlowRouter.route('/', {
   },
 });
 
+FlowRouter.route('/:show', {
+  name: 'App.home',
+  action() {
+    BlazeLayout.render('App_body', { main: 'home' });
+  },
+});
+
 FlowRouter.route('/profile', {
   name: 'profile',
   action() {
