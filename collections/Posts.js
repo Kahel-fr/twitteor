@@ -1,3 +1,4 @@
+import { Meteor } from 'meteor/meteor';
 export const Posts = new Mongo.Collection("posts");
 
 SchemaPost = new SimpleSchema({
@@ -15,7 +16,15 @@ SchemaPost = new SimpleSchema({
 		autoValue: function(){
 			return Meteor.userId();
 		}
-	}
+	},
+      username: {
+		  type: String,
+		  autoValue: function(){
+			return Meteor.user().username;
+		  }
+	  }
+
+
 });
 
 Posts.allow({
