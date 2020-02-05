@@ -2,6 +2,10 @@ import './post.html';
 import {Posts} from "../../../../collections/Posts.js";
 
 Template.post.helpers({
+	//retourne vrai si le post appartient à l'utilisateur connecté
+	belongToUser(){
+		return Template.instance().data.author == Meteor.userId();
+	},
 	//retourne vrai si le post est affiché sur sa propre page
 	self(){
 		return FlowRouter.getParam("_id") == Template.instance().data._id;
@@ -19,4 +23,8 @@ Template.post.helpers({
 	}
 })
 
-
+Template.post.events({
+	'click .delete'(event, template){
+		Posts.remove({_id: template.data._id});
+	}
+})

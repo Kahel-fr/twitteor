@@ -32,6 +32,9 @@ SchemaPost = new SimpleSchema({
 Posts.allow({
   insert: function () {
     return !!Meteor.userId();
+  },
+  remove: function(userId, post){
+  	return userId == post.author;
   }
 })
 

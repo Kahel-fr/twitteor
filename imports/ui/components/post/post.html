@@ -1,7 +1,13 @@
 <template name="post">
 <div class="template-post">
 	<div class="card mb-3">
-	  <div class="card-header"><a href="/profile/{{author}}">{{username}}</a></div>
+	  <div class="card-header">
+	  	<a href="/profile/{{author}}">{{username}}</a>
+	  	<!--si le post appartient à l'utilisateur connecté il peut le supprimer-->
+	  	{{#if belongToUser }}
+	  		<a class="delete float-right text-danger" href="">X</a>
+	  	{{/if}}
+	  	</div>
 	 
 	  <div class="card-body">
 	  	<!--s'il s'agit d'un commentaire et qu'on est pas déjà dans la page du parent on affiche le lien vers le parent-->
