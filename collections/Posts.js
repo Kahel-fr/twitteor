@@ -5,6 +5,9 @@ SchemaPost = new SimpleSchema({
 	content: {
 		type: String
 	},
+	parent: {
+		type: String
+	},
 	createdAt: {
 		type: Date,
 		autoValue: function(){

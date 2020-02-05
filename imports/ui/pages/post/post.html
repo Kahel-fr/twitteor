@@ -1,0 +1,7 @@
+<template name="post_page">
+	{{>post parent}}
+	{{>post_form parent=parent._id}}
+	{{#each commentaires}}
+		{{>post}}
+	{{/each}}
+</template>

@@ -3,10 +3,16 @@ import "./post-form.html";
 import {Posts} from "../../../../collections/Posts.js";
 
 Template.post_form.events({
-	'submit'(event){
+	'submit'(event, template){
 		event.preventDefault();
-		Posts.insert({
-			content: event.target.content.value,
-		});
+		if(!!template.data.parent)		
+			Posts.insert({
+				content: event.target.content.value,
+				parent: template.data.parent
+			});
+		else
+			Posts.insert({
+				content: event.target.content.value,
+			});
 	}
 })
