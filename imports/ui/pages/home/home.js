@@ -19,7 +19,7 @@ Template.home.helpers({
 			posts = Posts.find({}, { sort: { createdAt: -1 } });
 		else{
 			var followedIds = Follows.find({follower: Meteor.userId()}, {followed: 1}).fetch().map(a => a.followed);
-			posts = Posts.find({author: {$in: followedIds}}, { sort: { createdAt: -1 } });
+			posts = Posts.find({$or: [{author: {$in: followedIds}}, {author: Meteor.userId()}]}, { sort: { createdAt: -1 } });
 		}
 		return posts;
 	},

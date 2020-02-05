@@ -4,11 +4,19 @@
 	  <div class="card-header"><a href="/profile/{{author}}">{{username}}</a></div>
 	 
 	  <div class="card-body">
+	  	<!--s'il s'agit d'un commentaire et qu'on est pas déjà dans la page du parent on affiche le lien vers le parent-->
+	  	{{#if hasParent}}
+	  		{{#unless commentaire}}
+	  			<p class="card-text"><a href="/post/{{parent}}">en réponse à-></a></p>
+	  		{{/unless}}
+	  	{{/if}}
 		<p class="card-text">{{content}}</p>
+		<!--affiche le nombre de commentaires/lien vers ceux-ci si on est pas dans la page de ce post-->
+		{{#unless self}}
+		<p class="card-text"><a href="/post/{{_id}}">{{commentaires}} commentaire(s)</a></p>
+		{{/unless}}
 		<div class="card-footer bg-transparent border-success">{{timestamp}}</div>
 	  </div>
 	</div>
 </div>
 </template>
-
-
