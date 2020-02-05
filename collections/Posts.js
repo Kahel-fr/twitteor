@@ -6,7 +6,8 @@ SchemaPost = new SimpleSchema({
 		type: String
 	},
 	parent: {
-		type: String
+		type: String,
+		optional: true
 	},
 	createdAt: {
 		type: Date,
@@ -31,6 +32,9 @@ SchemaPost = new SimpleSchema({
 Posts.allow({
   insert: function () {
     return !!Meteor.userId();
+  },
+  remove: function(userId, post){
+  	return userId == post.author;
   }
 })
 
