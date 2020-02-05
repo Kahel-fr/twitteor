@@ -23,8 +23,6 @@ SchemaPost = new SimpleSchema({
 			return Meteor.user().username;
 		  }
 	  }
-
-
 });
 
 Posts.allow({

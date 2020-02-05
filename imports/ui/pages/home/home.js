@@ -15,7 +15,7 @@ Template.home.onCreated(function() {
 Template.home.helpers({
 	posts() {
 		var posts;
-		if(FlowRouter.getParam("show") == "all")
+		if(FlowRouter.getParam("all") == "all")
 			posts = Posts.find({}, { sort: { createdAt: -1 } });
 		else{
 			var followedIds = Follows.find({follower: Meteor.userId()}, {followed: 1}).fetch().map(a => a.followed);
