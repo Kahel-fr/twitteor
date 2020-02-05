@@ -7,8 +7,6 @@ Meteor.users.allow({
   }
 })
 
-Meteor.users.attachSchema(SchemaPost);
-
 if(Meteor.isServer){
 	Meteor.publish('users.all', function(){
 		return Meteor.users.find({});
