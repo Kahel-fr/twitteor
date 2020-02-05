@@ -1,7 +1,15 @@
 import './post.html';
 import {Posts} from "../../../../collections/Posts.js";
+import { Meteor } from 'meteor/meteor';
+
 
 Template.post.helpers({
+	//retourne lenom d'utilisateur de l'auteur
+	username(){
+		var author = Meteor.users.findOne({_id: Template.instance().data.author})
+		return author.username
+	},
+	
 	//retourne vrai si le post appartient à l'utilisateur connecté
 	belongToUser(){
 		return Template.instance().data.author == Meteor.userId();

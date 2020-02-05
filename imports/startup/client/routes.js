@@ -9,6 +9,7 @@ import '../../ui/pages/post/post.js';
 import '../../ui/pages/profile/followeds/followeds.js';
 import '../../ui/pages/profile/followers/followers.js';
 import '../../ui/pages/not-found/not-found.js';
+import '../../ui/pages/profile/modification/modification.js';
 
 // Set up all routes in the app
 FlowRouter.route('/', {
@@ -51,6 +52,13 @@ FlowRouter.route('/profile/:_id', {
   action() {
     BlazeLayout.render('App_body', { main: 'profile' });
   },
+});
+
+FlowRouter.route('/modification/', {
+	name: 'modification',
+	action() {
+		BlazeLayout.render('App_body', {main: 'modification'});
+	},
 });
 
 FlowRouter.route('/followeds/:_id', {

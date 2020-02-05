@@ -6,6 +6,11 @@ Meteor.users.allow({
     return !!Meteor.userId();
   }
 })
+Meteor.users.allow({
+	update: function(userId, user) {
+		return userId == user._id;
+	}
+})
 
 if(Meteor.isServer){
 	Meteor.publish('users.all', function(){
