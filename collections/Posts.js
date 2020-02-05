@@ -6,7 +6,8 @@ SchemaPost = new SimpleSchema({
 		type: String
 	},
 	parent: {
-		type: String
+		type: String,
+		optional: true
 	},
 	createdAt: {
 		type: Date,
